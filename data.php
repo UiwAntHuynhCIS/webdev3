@@ -1,6 +1,6 @@
 <?php
 // Reads champions and traits from the tft_champions database.
-require_once 'config.php';
+require_once 'connection.php';
 $db = champDb();
 
 $characters = $db->query("SELECT name FROM champions ORDER BY name")->fetchAll(PDO::FETCH_COLUMN);
